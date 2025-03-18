@@ -82,5 +82,121 @@ class _CalculatorState extends State<Calculator> {
     });
   }
 
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Calculator'),
+      ),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CupertinoTextField(
+                controller: _controller,
+                readOnly: true,
+                placeholder: 'Enter a number',
+              ),
+              SizedBox(height: 20),
+              CupertinoTextField(
+                controller: TextEditingController(text: _result),
+                readOnly: true,
+                placeholder: 'Result',
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  CupertinoButton(
+                    child: Text('1'),
+                    onPressed: () => _onNumberPressed('1'),
+                  ),
+                  CupertinoButton(
+                    child: Text('2'),
+                    onPressed: () => _onNumberPressed('2'),
+                  ),
+                  CupertinoButton(
+                    child: Text('3'),
+                    onPressed: () => _onNumberPressed('3'),
+                  ),
+                  CupertinoButton(
+                    child: Text('+'),
+                    onPressed: () => _onOperatorPressed('+'),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  CupertinoButton(
+                    child: Text('4'),
+                    onPressed: () => _onNumberPressed('4'),
+                  ),
+                  CupertinoButton(
+                    child: Text('5'),
+                    onPressed: () => _onNumberPressed('5'),
+                  ),
+                  CupertinoButton(
+                    child: Text('6'),
+                    onPressed: () => _onNumberPressed('6'),
+                  ),
+                  CupertinoButton(
+                    child: Text('-'),
+                    onPressed: () => _onOperatorPressed('-'),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  CupertinoButton(
+                    child: Text('7'),
+                    onPressed: () => _onNumberPressed('7'),
+                  ),
+                  CupertinoButton(
+                    child: Text('8'),
+                    onPressed: () => _onNumberPressed('8'),
+                  ),
+                  CupertinoButton(
+                    child: Text('9'),
+                    onPressed: () => _onNumberPressed('9'),
+                  ),
+                  CupertinoButton(
+                    child: Text('*'),
+                    onPressed: () => _onOperatorPressed('*'),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  CupertinoButton(
+                    child: Text('0'),
+                    onPressed: () => _onNumberPressed('0'),
+                  ),
+                  CupertinoButton(
+                    child: Text('C'),
+                    onPressed: _clear,
+                  ),
+                  CupertinoButton(
+                    child: Text('='),
+                    onPressed: _calculate,
+                  ),
+                  CupertinoButton(
+                    child: Text('/'),
+                    onPressed: () => _onOperatorPressed('/'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 
 
