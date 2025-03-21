@@ -106,64 +106,83 @@ class _CalculatorState extends State<Calculator> {
                 placeholder: 'Result',
               ),
               SizedBox(height: 20),
+
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('1'),
                     onPressed: () => _onNumberPressed('1'),
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('2'),
                     onPressed: () => _onNumberPressed('2'),
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('3'),
                     onPressed: () => _onNumberPressed('3'),
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('+'),
                     onPressed: () => _onOperatorPressed('+'),
                   ),
                 ],
               ),
+
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('4'),
                     onPressed: () => _onNumberPressed('4'),
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('5'),
                     onPressed: () => _onNumberPressed('5'),
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('6'),
                     onPressed: () => _onNumberPressed('6'),
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('-'),
                     onPressed: () => _onOperatorPressed('-'),
                   ),
                 ],
               ),
+
+
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('7'),
                     onPressed: () => _onNumberPressed('7'),
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('8'),
                     onPressed: () => _onNumberPressed('8'),
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('9'),
                     onPressed: () => _onNumberPressed('9'),
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('*'),
                     onPressed: () => _onOperatorPressed('*'),
                   ),
@@ -173,18 +192,22 @@ class _CalculatorState extends State<Calculator> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('0'),
                     onPressed: () => _onNumberPressed('0'),
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemRed,
                     child: Text('C'),
                     onPressed: _clear,
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('='),
                     onPressed: _calculate,
                   ),
                   CupertinoButton(
+                    color: CupertinoColors.systemGrey2,
                     child: Text('/'),
                     onPressed: () => _onOperatorPressed('/'),
                   ),
